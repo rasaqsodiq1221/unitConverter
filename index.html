@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="input container">
+            <button class="btn openModal">Enter New Value</button>
+            <i class="fas fa-moon" id="icon"></i>
+        </div>
+    </header>
+    <section class="displayValue">
+        <div class="container">
+            <h3>Metric/Imperial unit conversion</h3>
+            <h1>0</h1>
+        </div>
+    </section>
+    <section class="conversion">
+        <div class="container">
+            <div>
+                <h4>Length (Meter/Feet)</h4>
+                <p>0 meters = 0.000 feet | 0 feet = 0.000 meters</p>
+            </div>
+            <div>
+                <h4>Volume (Liters/Gallons)</h4>
+                <p>0 liters = 0.000 gallons | 0 gallons = 0.000 liters</p>
+            </div>
+            <div>
+                <h4>Mass (Kilograms/Pounds)</h4>
+                <p>0 kilos = 0.000 pounds | 0 pounds = 0.000 kilos</p>
+            </div>
+        </div>
+    </section>
+    <dialog class="modal container" id="modal">
+        <i class="fas fa-times closeModal" id="times"></i>
+        <form class="convertValue" method="dialog">
+            <input type="number" name="inputValue" id="inputValue">
+            <button type="submit" class="enterValue btn">ENTER</button>
+        </form>
+    </dialog>
+
+    <script src="/script.js"></script>
+</body>
+</html>
