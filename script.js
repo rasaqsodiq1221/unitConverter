@@ -23,3 +23,23 @@ openModal.addEventListener("click", () => {
 closeModal.addEventListener("click", () => {
   modal.close();
 });
+
+
+let inputValue = document.getElementById('inputValue');
+let enterValue = document.querySelector('.enterValue');
+let mainValue = document.getElementById('mainValue');
+
+enterValue.addEventListener('click', displayValue);
+
+function displayValue() {
+  let outputValue = inputValue.value;
+  mainValue.textContent = outputValue;
+  lenghtConversion();
+  volumeConversion();
+  massConversion();
+}
+
+function lenghtConversion() {
+  const meterToFeet = 3.28084;
+  
+}

@@ -79,6 +79,9 @@ h1 {
     margin-top: 1rem;
     font-size: 6.97rem;
     font-weight: 800;
+    width: 100%;
+    overflow: hidden;
+    overflow-x: scroll;
 }
 
 .conversion {
