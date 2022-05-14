@@ -80,8 +80,7 @@ h1 {
     font-size: 6.97rem;
     font-weight: 800;
     width: 100%;
-    overflow: hidden;
-    overflow-x: scroll;
+    overflow: auto;
 }
 
 .conversion {

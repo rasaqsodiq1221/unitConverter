@@ -37,7 +37,12 @@ enterValue.addEventListener('click', displayValue);
 
 function displayValue() {
   let outputValue = inputValue.value;
-  mainValue.textContent = outputValue;
+
+  if (outputValue === "") {
+    alert("Enter a Valid Number");
+  } else {
+    mainValue.textContent = outputValue;
+  }
   let meterToFeetConversion = (outputValue * meterToFeet).toFixed(3);
   let feetToMeterConversion = (outputValue / meterToFeet).toFixed(3)
   lengthConversion();
