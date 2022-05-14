@@ -28,18 +28,42 @@ closeModal.addEventListener("click", () => {
 let inputValue = document.getElementById('inputValue');
 let enterValue = document.querySelector('.enterValue');
 let mainValue = document.getElementById('mainValue');
+const meterToFeet = 3.28084;
+const literToGallon = 0.2641722;
+const kiloToPounds = 2.20462;
 
 enterValue.addEventListener('click', displayValue);
+
 
 function displayValue() {
   let outputValue = inputValue.value;
   mainValue.textContent = outputValue;
-  lenghtConversion();
+  let meterToFeetConversion = (outputValue * meterToFeet).toFixed(3);
+  let feetToMeterConversion = (outputValue / meterToFeet).toFixed(3)
+  lengthConversion();
+
+    function lengthConversion() {
+      let lengthPara = document.getElementById('lengthPara');
+      lengthPara.textContent = `${outputValue} meters = ${meterToFeetConversion} feet | ${outputValue} feet = ${feetToMeterConversion} meters`
+    }
+
+  let literToGallonConversion = (outputValue * literToGallon).toFixed(3);
+  let gallonToLiterConversion = (outputValue / literToGallon).toFixed(3);
   volumeConversion();
+
+    function volumeConversion() {
+      let volumePara = document.getElementById('volumePara');
+      volumePara.textContent = `${outputValue} liters  = ${literToGallonConversion} gallons | ${outputValue} gallons = ${gallonToLiterConversion} liters `
+    }
+
+  let kiloToPoundsConversion = (outputValue * kiloToPounds).toFixed(3);
+  let poundsToKiloConversion = (outputValue / kiloToPounds).toFixed(3);
   massConversion();
+
+  function massConversion() {
+    let massPara = document.getElementById('massPara');
+    massPara.textContent = `${outputValue} kilos  = ${kiloToPoundsConversion} pounds | ${outputValue} pounds = ${poundsToKiloConversion} kilos `
+  }
 }
 
-function lenghtConversion() {
-  const meterToFeet = 3.28084;
-  
-}
+
